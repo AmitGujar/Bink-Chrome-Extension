@@ -1,0 +1,130 @@
+body {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.background-container {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+
+}
+/* code for top navbar */
+.topnav {
+  overflow: hidden;
+  background-color:transparent;
+  margin-left: 3.56%;
+}
+
+.topnav a {
+  float: left;
+  color: #ddd3d3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* code for search bar */
+.search {
+  width: 50%;
+  left: 45%;
+  top: 150px;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 85%;
+  border: 3px solid #00B4CC;
+  margin-left: 50px;
+  padding: 3px;
+  height: 45px;
+  font-size: 20px;
+  border-radius: 5px 5 5 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus{
+  color: red;
+}
+
+.searchButton {
+  width: 58px;
+  height: 45px;
+  border: 3px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5 5px 5px 5;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* code for sidebar */
+#mySidenav a {
+  position: absolute;
+  left: -100px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 19px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#spotify {
+  top: 90px;
+  background-color: #4CAF50;
+}
+
+#facebook {
+  top: 150px;
+  background-color: #2196F3;
+}
+
+#youtube {
+  top: 210px;
+  background-color: #f44336;
+}
+
+#twitter {
+  top: 270px;
+  background-color: #555
+}
+.time {
+  width: 32%;
+  font-size: 120px;
+  line-height: 1;
+  padding: 70px;
+  padding-left: 10%;
+  color: #ddd3d3;
+}
+.info {
+  color: #ddd3d3;
+  text-align: center;
+}
+#quotes {
+  font-size: 120%;
+  text-align: center;
+  color: #ddd3d3;
+}
+
+#change-btn {
+  background-color: #2196F3;
+  text-decoration-color: #ddd3d3;
+}
