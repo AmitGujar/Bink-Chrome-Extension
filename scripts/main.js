@@ -11,24 +11,22 @@ window.addEventListener('load', function () {
   searchButton.addEventListener("click", function () {
     var searchQuery = document.getElementById("input-query").value;
     var searchURL;
-    if (searchQuery === '') 
-    {
+    if (searchQuery === '') {
       alert("Oooh..!! Enter Something");
-    }
-    else {
-    searchURL = "https://www.bing.com/search?q=" + searchQuery;
-    window.open(searchURL);
-    window.close();
+    } else {
+      searchURL = "https://www.bing.com/search?q=" + searchQuery;
+      window.open(searchURL);
+      window.close();
     }
   })
 
   var input = document.getElementById("input-query");
   input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("search-btn").click();
+      event.preventDefault();
+      document.getElementById("search-btn").click();
     }
-});
+  });
 
 })
 
@@ -43,10 +41,10 @@ const clientID = "?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960
 
 function getQuotes() {
   fetch("https://quote-garden.herokuapp.com/quotes/random")
-      .then(res => res.json())
-      .then(data => {
-        document.querySelector('#quotes').innerHTML = `<h5 style='font-size:25px'>"${data.quoteText}"</h4><h5 style='font-size:20px'><i> by - ${data.quoteAuthor}</i></h5>`;
-      })
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector('#quotes').innerHTML = `<h5 style='font-size:25px'>"${data.quoteText}"</h4><h5 style='font-size:20px'><i> by - ${data.quoteAuthor}</i></h5>`;
+    })
 }
 
 function fetchImage() {
@@ -97,7 +95,7 @@ function getTime() {
   var timeInDOM = document.getElementById("current-time").innerHTML;
   var timeString = _hours + ":" + _minutes;
   if (timeInDOM !== timeString) {
-      document.getElementById("current-time").innerHTML = timeString;
+    document.getElementById("current-time").innerHTML = timeString;
   }
 }
 // getTime() will be called in every 1 second of interval
@@ -106,7 +104,35 @@ setInterval(getTime, 1000);
 //Function add zero
 function checkTimeAddZero(i) {
   if (i < 10) {
-      i = "0" + i;
+    i = "0" + i;
   }
   return i;
 }
+window.addEventListener("load", () => {
+  let long;
+  let lat;
+  let temperatureDescription = document.querySelector('.temperature-description');
+  let temperatureDegree = document.querySelector('.temperature-degree');
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      long = position.coords.longitude;
+      lat = position.coords.latitude;
+
+      const proxy = 'http://cors-anywhere.herokuapp.com/';
+      const api = `${proxy}https://api.darksky.net/forecast/551f03febb4552249ba0f312ebdbd498/${lat},${long}`;
+      fetch(api)
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          const {
+            temperature,
+            summery,
+            icon
+          } = data.currently;
+          temperatureDegree.textContent = temperature;
+          temperatureDescription.textContent = summery;
+        });
+    });
+  }
+});

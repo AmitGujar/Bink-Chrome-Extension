@@ -1,46 +1,59 @@
 <html lang="en-US">
-    <head>
-        <title>New Tab</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles/fonts.css">
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="scripts/main.js"></script>
-    </head>
-    <body>
-        <div class="background-container" id="background-container">
-            <div class="main-container">
-                <div class="topnav">
-                    <a class="active" href="https://www.google.com/gmail">Gmail</a>
-                    <a href="https://www.bing.com/videos/feed">Videos</a>
-                    <a href="https://www.google.com/drive">Drive</a>
-                    <a href="https://www.bing.com/news?FORM=Z9LH4">News</a><a>|</a>
-                    <a href="https://github.com">Github</a>
-                    <a href="https://www.office.com/?WT.mc_id=O16_BingHP">Office</a>
-                    <a href="https://www.outlook.com/">Outlook.com</a>
+
+<head>
+    <title>New Tab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/main.js"></script>
+</head>
+
+<body>
+    <div class="background-container" id="background-container">
+        <div class="main-container">
+            <div class="topnav">
+                <a class="active" href="https://www.google.com/gmail">Gmail</a>
+                <a href="https://www.bing.com/videos/feed">Videos</a>
+                <a href="https://www.google.com/drive">Drive</a>
+                <a href="https://www.bing.com/news?FORM=Z9LH4">News</a><a>|</a>
+                <a href="https://github.com">Github</a>
+                <a href="https://www.office.com/?WT.mc_id=O16_BingHP">Office</a>
+                <a href="https://www.outlook.com/">Outlook.com</a>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="https://open.spotify.com/browse" id="spotify">Spotify</a>
+                <a href="https://www.facebook.com" id="facebook">Facebook</a>
+                <a href="https://www.youtube.com/" id="youtube">Youtube</a>
+                <a href="https://www.twitter.com/" id="twitter">Twitter</a>
+            </div>
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Let's Bing" id="input-query">
+                <button type="submit" class="searchButton" id="search-btn">bing</button>
+            </div>
+            <div class="time" id="current-time"></div>
+            <div class="info">
+                <div id="quotes"></div>
+                <br>
+                <div>
+                    <h5 class="display-4" style='font-size:150%'>Photo by : <span id="credit"></span></h5>
                 </div>
-                <div id="mySidenav" class="sidenav">
-                    <a href="https://open.spotify.com/browse" id="spotify">Spotify</a>
-                    <a href="https://www.facebook.com" id="facebook">Facebook</a>
-                    <a href="https://www.youtube.com/" id="youtube">Youtube</a>
-                    <a href="https://www.twitter.com/" id="twitter">Twitter</a>
-                </div>
-                <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Let's Bing" id="input-query">
-                    <button type="submit" class="searchButton" id="search-btn">bing</button>
-                </div>
-                <div class="time" id="current-time"></div>
-                <div class="info">
-                    <div id="quotes"></div>
-                    <br>
-                    <div>
-                        <h5 class="display-4" style='font-size:150%'>Photo by : <span id="credit"></span></h5>
-                    </div>
-                    <div id="navigate"></div>
-                    <p></p><button id="change-btn">Change ME</button></p>
+                <div id="navigate"></div>
+                <p></p><button id="change-btn">Change ME</button></p>
                 <div id="location"></div>
+            </div>
+            <div class="weather">
+                <div class="temperature">
+                    <div class="degree-section"><i class="fa fa-fw fa-cloud"></i>
+                        <div class="temperature-degree"></div>
+                        <div class="unit">°F</div>
+                    </div>
+                </div>
+                <div class="temperature-description"></div>
             </div>
         </div>
     </div>
-    </body>
+</body>
+
 </html>
