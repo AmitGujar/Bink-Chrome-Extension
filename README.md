@@ -8,6 +8,24 @@
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
+## Version 2.0 Changelog
+
+1.Added Live Weather.
+2.Search bar bug fixed.
+3.Smooth Transitions Added.
+4.Redesigned Navbar (added quick acces to Gmail, Drive, Github).
+5.Default Wallpaper Changed.
+6.Minor Bug fixes and Improvements.
+
+## Upcoming Changes
+1.Todo Section.
+2.Spotify Playback.
+3.Live Wallpapers.
+4.Location Widget.
+5.Minor UI Change.
+
+[![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/download.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
+
 ## Dependencies
 For Background Images [Unsplash API](https://github.com/unsplash/unsplash-js)<br>
 For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)
@@ -15,9 +33,6 @@ For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)
 ## Programming languages and Tools
 1. Vanilla JavaScript
 2. Visual Studio Code
-
-[![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/download.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
-
 
 ## Getting Started
 
