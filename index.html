@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/main.js"></script>
+    <script src="scripts/skycons.js"></script>
 </head>
 
 <body>
@@ -45,12 +46,13 @@
             </div>
             <div class="weather">
                 <div class="temperature">
-                    <div class="degree-section"><i class="fa fa-fw fa-cloud"></i>
+                    <div class="degree-section">
+                        <canvas class="icon" width="85" height="70"></canvas>
                         <div class="temperature-degree"></div>
                         <div class="unit">°F</div>
+                        <p class="temperature-description"></p>
                     </div>
                 </div>
-                <div class="temperature-description"></div>
             </div>
         </div>
     </div>

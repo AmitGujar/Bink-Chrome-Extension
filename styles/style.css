@@ -149,11 +149,21 @@ body {
 }
 
 .temperature-degree {
-  margin-left: 40;
-  margin-top: -21;
+  margin-left: 90;
+  margin-top: -40;
+  font-size: 25;
 }
 
 .unit {
-  margin-left: 102;
+  margin-left: 130;
   margin-top: -21;
+}
+
+.degree-section {
+  margin-top: -80;
+}
+
+.temperature-description {
+  line-height: 0.5;
+  padding-left: 14;
 }
