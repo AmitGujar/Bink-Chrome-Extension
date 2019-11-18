@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/AmitGujar/Bink-Chrome-Extension?style=plastic)
 
 # Screenshots
-<img src="screenshot/Screenshot (11).png"
+<img src="screenshot/Screenshot (12).png"
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
