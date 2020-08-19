@@ -23,7 +23,8 @@
     "permissions": [
         "activeTab",
         "storage",
-        "geolocation"
+        "geolocation",
+        "alarms"
     ]
 
 }
