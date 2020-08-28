@@ -25,11 +25,7 @@
 
 For Background Images [Unsplash API](https://github.com/unsplash/unsplash-js)<br>
 For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)
-
-## Programming languages and Tools
-
-1. Vanilla JavaScript
-2. Visual Studio Code
+For Weather [Darksky API](https://darksky.net/)
 
 ## Your contributions are welcome.
 
