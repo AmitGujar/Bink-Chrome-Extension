@@ -11,15 +11,6 @@
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
-## Version 2.0 Changelog
-
-1. Added Live Weather
-2. Search bar bug fixed
-3. Smooth Transitions Added
-4. Remapped Navbar (added quick acces to Gmail, Drive, Github)
-5. Default Wallpaper Changed
-6. Minor Bug fixes and Improvements
-
 ## Upcoming Changes
 
 1. Todo Section
