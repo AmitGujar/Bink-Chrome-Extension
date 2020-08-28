@@ -24,7 +24,7 @@
 ## Dependencies
 
 For Background Images [Unsplash API](https://github.com/unsplash/unsplash-js)<br>
-For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)
+For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)<br>
 For Weather [Darksky API](https://darksky.net/)
 
 ## Your contributions are welcome.
