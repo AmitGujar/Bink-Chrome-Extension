@@ -91,7 +91,7 @@ function unsplashGetPhotos() {
 
 chrome.alarms.create("ChangeWallpaper", {
   // delayInMinutes: 1.0,
-  periodInMinutes: 480,
+  periodInMinutes: 1,
 });
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
