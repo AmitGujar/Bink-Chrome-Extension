@@ -11,13 +11,9 @@
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
-## Upcoming Changes
+## Known Bugs
 
-1. Todo Section
-2. Spotify Playback
-3. Live Wallpapers
-4. Location Widget
-5. Minor UI Change
+1. Resolution issues for <1080p screens.
 
 [![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/download.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
 
