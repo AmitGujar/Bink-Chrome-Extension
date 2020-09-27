@@ -45,7 +45,7 @@ function getQuotes() {
     .then((data) => {
       document.querySelector(
         "#quotes"
-      ).innerHTML = `<br><p><b style='font-size:23'>"${data.quoteText}"</b></p><div style='font-size:23'><i> by - ${data.quoteAuthor}</i></div>`;
+      ).innerHTML = `<br><p><b style='font-size:23'>"${data.quoteText}"</b></p><div style='font-size:20'><i> by - ${data.quoteAuthor}</i></div>`;
     });
 }
 
