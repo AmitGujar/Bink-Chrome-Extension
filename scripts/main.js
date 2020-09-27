@@ -93,14 +93,16 @@ async function handleImageUrl(url){
 }
 
 
- function unsplashGetPhotos() {
-  fetch(`https://api.unsplash.com/photos/random${clientID}`)
+function unsplashGetPhotos() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  fetch(`https://api.unsplash.com/photos/random${clientID}&w=${width}&h=${height}`)
     .then((res) => res.json())
     .then((data) => {
       localStorage.setItem("timestampFetched", Date.now());
       localStorage.setItem("name", data.user.name);
       localStorage.setItem("link", data.links.html);
-      handleImageUrl(data.urls.full);
+      handleImageUrl(data.urls.custom);
     })
     .catch((err) => {
       console.error(err);
