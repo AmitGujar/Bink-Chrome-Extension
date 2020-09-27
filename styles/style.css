@@ -44,7 +44,7 @@ body {
 .search {
   width: 50%;
   left: 45%;
-  top: 150px;
+  top: 110px;
   position: relative;
   display: flex;
 }
@@ -118,7 +118,7 @@ body {
   width: 32%;
   font-size: 120px;
   line-height: 1;
-  padding: 70px;
+  padding: 40px;
   padding-left: 10%;
   color: #ddd3d3;
 }
@@ -129,7 +129,6 @@ body {
 }
 
 #quotes {
-  font-size: 120%;
   text-align: center;
   color: #ddd3d3;
 }
@@ -140,11 +139,12 @@ body {
 }
 
 .weather {
+  padding: 1px  10px 10px 30px;
   width: 30%;
   color: #ddd3d3;
   font-size: 22;
   margin-left: 10;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   line-height: 1;
 }
 
@@ -157,10 +157,6 @@ body {
 .unit {
   margin-left: 130;
   margin-top: -21;
-}
-
-.degree-section {
-  margin-top: -80;
 }
 
 .temperature-description {

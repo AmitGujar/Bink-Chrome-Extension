@@ -45,7 +45,7 @@ function getQuotes() {
     .then((data) => {
       document.querySelector(
         "#quotes"
-      ).innerHTML = `<h5 style='font-size:25px'>"${data.quoteText}"</h4><h5 style='font-size:20px'><i> by - ${data.quoteAuthor}</i></h5>`;
+      ).innerHTML = `<br><p><b style='font-size:23'>"${data.quoteText}"</b></p><div style='font-size:23'><i> by - ${data.quoteAuthor}</i></div>`;
     });
 }
 
@@ -89,14 +89,14 @@ function unsplashGetPhotos() {
 
 // ! test code starts from here
 
-chrome.alarms.create("ChangeWallpaper", {
-  // delayInMinutes: 1.0,
-  periodInMinutes: 1,
-});
+// chrome.alarms.create("ChangeWallpaper", {
+//   // delayInMinutes: 1.0,
+//   periodInMinutes: 1,
+// });
 
-chrome.alarms.onAlarm.addListener(function (alarm) {
-  unsplashGetPhotos(alarm);
-});
+// chrome.alarms.onAlarm.addListener(function (alarm) {
+//   unsplashGetPhotos(alarm);
+// });
 
 //! test code ends here
 
