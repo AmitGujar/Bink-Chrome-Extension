@@ -87,16 +87,16 @@ function unsplashGetPhotos() {
     });
 }
 
-// ! test code starts from here
+// ! test code for auto change wallpaper starts from here
 
-// chrome.alarms.create("ChangeWallpaper", {
-//   // delayInMinutes: 1.0,
-//   periodInMinutes: 1,
-// });
+chrome.alarms.create("ChangeWallpaper", {
+  // delayInMinutes: 1.0,
+  periodInMinutes: 1,
+});
 
-// chrome.alarms.onAlarm.addListener(function (alarm) {
-//   unsplashGetPhotos(alarm);
-// });
+chrome.alarms.onAlarm.addListener(function (alarm) {
+  unsplashGetPhotos(alarm);
+});
 
 //! test code ends here
 
