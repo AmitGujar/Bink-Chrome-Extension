@@ -63,12 +63,10 @@ function getQuotes() {
 
 function fetchImage() {
   const img = new Image();
-  document.getElementById("background-container").style.opacity = 0;
   img.onload = function () {
     document.getElementById(
       "background-container"
     ).style.backgroundImage = `url(${this.src})`;
-    document.getElementById("background-container").style.opacity = 1;
   };
 
   if (localStorage.getItem("image") === null) {

@@ -13,9 +13,8 @@ body {
   height: 100%;
   width: 100%;
   background-position: center;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: background-image 0.5s;
+  transition: background-image 0.5s;
 
 }
 
