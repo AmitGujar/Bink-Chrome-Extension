@@ -1,8 +1,6 @@
 window.onload = function () {
   init();
-  document.querySelector("#change-btn").addEventListener("click", () => {
-    unsplashGetPhotos();
-  });
+  document.querySelector("#change-btn").addEventListener("click",unsplashGetPhotos);
 };
 
 window.addEventListener("load", function () {
@@ -30,9 +28,23 @@ window.addEventListener("load", function () {
 });
 
 function init() {
-  fetchImage();
+  handleBackgroundInit()
   getTime();
   getQuotes();
+}
+
+
+function handleBackgroundInit(){
+  fetchImage();
+  if(shouldGetNewPhoto())unsplashGetPhotos();
+}
+const HOUR_LIMIT = 12;
+
+function shouldGetNewPhoto(){
+  const timestampFetched = parseInt(localStorage.getItem("timestampFetched"));
+  const timestampDiff = (Date.now() - timestampFetched);
+  const hourDiff = new Date(timestampDiff).getUTCHours();
+  return HOUR_LIMIT<new Date(hourDiff).getHours();
 }
 
 //api access key
@@ -57,13 +69,12 @@ function fetchImage() {
       "background-container"
     ).style.backgroundImage = `url(${this.src})`;
     document.getElementById("background-container").style.opacity = 1;
-    document.getElementById("background-container").style.opacity = 1;
   };
 
-  if (localStorage.getItem("url") === null) {
+  if (localStorage.getItem("image") === null) {
     img.src = "styles/default.jpg";
   } else {
-    img.src = localStorage.getItem("url");
+    img.src = localStorage.getItem("image");
     credit.innerHTML = `<a target="_blank">${localStorage.getItem("name")}</a>`;
     navigate.innerHTML = `<a target="_blank"  style="color : white; font-size:130%;" href="${localStorage.getItem(
       "link"
@@ -71,16 +82,25 @@ function fetchImage() {
   }
 }
 
-function unsplashGetPhotos() {
+async function handleImageUrl(url){
+  const reader = new FileReader();
+  const blob = await fetch(url).then(res=>res.blob());
+  await reader.readAsDataURL(blob);
+  reader.onload = function(e) {
+    localStorage.setItem("image", reader.result);
+    fetchImage();
+  };
+}
+
+
+ function unsplashGetPhotos() {
   fetch(`https://api.unsplash.com/photos/random${clientID}`)
     .then((res) => res.json())
     .then((data) => {
-      localStorage.setItem("url", data.urls.full);
+      localStorage.setItem("timestampFetched", Date.now());
       localStorage.setItem("name", data.user.name);
       localStorage.setItem("link", data.links.html);
-    })
-    .then(() => {
-      fetchImage();
+      handleImageUrl(data.urls.full);
     })
     .catch((err) => {
       console.error(err);
@@ -94,9 +114,7 @@ chrome.alarms.create("ChangeWallpaper", {
   periodInMinutes: 1,
 });
 
-chrome.alarms.onAlarm.addListener(function (alarm) {
-  unsplashGetPhotos(alarm);
-});
+chrome.alarms.onAlarm.addListener(unsplashGetPhotos);
 
 //! test code ends here
 
