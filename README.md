@@ -11,11 +11,11 @@
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
-## Known Bugs
-
 ## Contributers
 
 [Kalovelo](https://github.com/Kalovelo)
+
+## Known Bugs
 
 1. Resolution issues for <1080p screens.
 
