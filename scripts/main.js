@@ -55,9 +55,11 @@ function getQuotes() {
   fetch("https://quote-garden.herokuapp.com/quotes/random")
     .then((res) => res.json())
     .then((data) => {
+      document.querySelector('.quote').innerHTML = data.quoteText;
       document.querySelector(
-        "#quotes"
-      ).innerHTML = `<br><p><b style='font-size:23'>"${data.quoteText}"</b></p><div style='font-size:20'><i> by - ${data.quoteAuthor}</i></div>`;
+        ".credit"
+      ).innerHTML = `<i> by - ${data.quoteAuthor}</i></h5>`;
+      document.querySelector('#quotes').style.opacity = 1;
     });
 }
 

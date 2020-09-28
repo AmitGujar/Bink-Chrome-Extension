@@ -130,6 +130,16 @@ body {
 #quotes {
   text-align: center;
   color: #ddd3d3;
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.quote{
+ font-size: 25px;
 }
 
 #change-btn {
