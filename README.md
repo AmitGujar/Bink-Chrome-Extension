@@ -13,6 +13,10 @@
 
 ## Known Bugs
 
+## Contributers
+
+[Kalovelo](https://github.com/Kalovelo)
+
 1. Resolution issues for <1080p screens.
 
 [![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/download.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
