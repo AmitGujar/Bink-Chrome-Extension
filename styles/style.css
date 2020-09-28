@@ -135,10 +135,12 @@ body {
 #change-btn {
   background-color: DodgerBlue; 
   border: none; 
+  outline: none;
   color: white; 
   padding: 12px 16px; 
   font-size: 16px; 
   cursor: pointer; 
+  border-radius:2px;
 }
 #change-btn:hover {
   transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
