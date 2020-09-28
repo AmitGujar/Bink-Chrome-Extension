@@ -132,12 +132,18 @@ body {
   text-align: center;
   color: #ddd3d3;
 }
-
 #change-btn {
-  background-color: #2196F3;
-  text-decoration-color: #ddd3d3;
+  background-color: DodgerBlue; 
+  border: none; 
+  color: white; 
+  padding: 12px 16px; 
+  font-size: 16px; 
+  cursor: pointer; 
 }
-
+#change-btn:hover {
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  background-color: RoyalBlue;
+}
 .weather {
   padding: 1px  10px 10px 30px;
   width: 30%;
