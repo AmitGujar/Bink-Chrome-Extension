@@ -57,9 +57,10 @@ function getQuotes() {
     .then((res) => res.json())
     .then((data) => {
       document.querySelector(".quote").innerHTML = data.quoteText;
-      document.querySelector(
-        ".credit"
-      ).innerHTML = `<i> by - ${data.quoteAuthor}</i>`;
+      // ! planned to remove quote author, cuz i know no one cares about that lol.
+      // document.querySelector(
+      //   ".credit"
+      // ).innerHTML = `<i> by - ${data.quoteAuthor}</i>`;
       document.querySelector("#quotes").style.opacity = 1;
     });
 }
