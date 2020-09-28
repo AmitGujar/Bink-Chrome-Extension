@@ -56,7 +56,7 @@ function getQuotes() {
   fetch("https://quote-garden.herokuapp.com/quotes/random")
     .then((res) => res.json())
     .then((data) => {
-      document.querySelector(".quote").innerHTML = data.quoteText;
+      document.querySelector(".quote").innerHTML = `" ${data.quoteText} "`;
       // ! planned to remove quote author, cuz i know no one cares about that lol.
       // document.querySelector(
       //   ".credit"
