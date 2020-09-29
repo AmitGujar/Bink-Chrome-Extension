@@ -134,7 +134,6 @@ body {
   flex-direction: column; */
   /* min-height: 30vh; */
   opacity: 0;
-  font-size: 20;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -142,27 +141,30 @@ body {
 .quote {
   font-size: 25px;
 }
+
 #change-btn {
-  background-color: DodgerBlue; 
-  border: none; 
+  cursor: pointer;
+  border: none;
   outline: none;
-  color: white; 
-  padding: 12px 16px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  border-radius:2px;
-}
-#change-btn:hover {
-  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  background-color: RoyalBlue;
-}
-#change-btn:hover i {
-  animation: fa-spin 0.5s linear;
+  background: none;
+  color: white;
+
 }
 
-#change-btn:active {
-  color: grey;
+#chngicon {
+  font-size: 25;
 }
+
+#change-btn:hover {
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  color: #4CAF50;
+}
+
+#change-btn:active i {
+  animation: fa-spin 0.5s linear;
+  color: red;
+}
+
 .weather {
   padding: 1px 10px 10px 30px;
   width: 30%;

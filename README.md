@@ -14,6 +14,8 @@
 ## Contributers
 
 [Kalovelo](https://github.com/Kalovelo)
+[unbeat](https://github.com/vandana1499)
+[Abdul Rehman](https://github.com/Abdul-Sen)
 
 ## Known Bugs
 
