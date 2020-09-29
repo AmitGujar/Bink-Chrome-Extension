@@ -13,8 +13,8 @@
 
 ## Contributers
 
-[Kalovelo](https://github.com/Kalovelo)
-[unbeat](https://github.com/vandana1499)
+[Kalovelo](https://github.com/Kalovelo)<br>
+[unbeat](https://github.com/vandana1499)<br>
 [Abdul Rehman](https://github.com/Abdul-Sen)
 
 ## Known Bugs
