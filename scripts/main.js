@@ -6,7 +6,7 @@ window.onload = function () {
 };
 
 window.addEventListener("load", function () {
-  console.log("All assets are loaded");
+  // console.log("All assets are loaded");
   var searchButton = document.getElementById("search-btn");
   searchButton.addEventListener("click", function () {
     var searchQuery = document.getElementById("input-query").value;
