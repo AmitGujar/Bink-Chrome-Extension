@@ -146,6 +146,13 @@ body {
   transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
   background-color: RoyalBlue;
 }
+#change-btn:hover i {
+  animation: fa-spin 0.5s linear;
+}
+
+#change-btn:active {
+  color: grey;
+}
 .weather {
   padding: 1px  10px 10px 30px;
   width: 30%;
