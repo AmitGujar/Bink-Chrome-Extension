@@ -23,6 +23,8 @@
 
 [![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/download.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
 
+[(/icons/English_get it from MS_864X312.png)](https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj)
+
 ## Dependencies
 
 For Background Images [Unsplash API](https://github.com/unsplash/unsplash-js)<br>
