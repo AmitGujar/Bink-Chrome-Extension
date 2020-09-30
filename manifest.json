@@ -17,6 +17,7 @@
         "16": "icons/icons16.png"
     },
     "permissions": [
+        "topSites",
         "activeTab",
         "storage",
         "geolocation",
