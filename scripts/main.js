@@ -33,6 +33,20 @@ function init() {
   handleBackgroundInit();
   getTime();
   getQuotes();
+  getTopSites()
+}
+
+function getTopSites() {
+  const top_sites = urls => {
+    const main = document.getElementById('main-nav');
+    for (var i = 0; i < 7; i++) {
+      let cssclass = i == 0 ? "active" : ""
+      let name = urls[i].title.length > 10 ? urls[i].title.substring(0, 10) + "..." : urls[i].title; // split the name if title is too long
+      let html = `<a class="${cssclass}" href="${urls[i].url}">${name}</a>`
+      main.innerHTML += html
+    }
+  }
+  chrome.topSites.get(top_sites);
 }
 
 function handleBackgroundInit() {
