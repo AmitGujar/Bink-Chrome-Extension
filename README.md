@@ -45,6 +45,7 @@ For Weather [Darksky API](https://darksky.net/)
 5. Select `Load Unpacked` and browse and select the cloned repository folder.
 6. Make sure that the extension is enabled.
 7. Open a new tab in Chrome and you should see a splash screen with motivational quotes.
+8. Microsoft Edge disables all-new tab extensions by default so, make sure to enable it manually from the extensions section.
 
 ### NOTE
 
