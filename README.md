@@ -19,7 +19,7 @@
 
 ## Known Bugs
 
-1. Resolution issues for <1080p screens.
+1. Resolution issues for <1080p screens. <br>
    <a href="https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj">
    <img src = "/icons/Microsoft.png" width=250px height=90px>
    </a>
