@@ -36,17 +36,19 @@ For Weather [Darksky API](https://darksky.net/)
 
 ## Your contributions are welcome.
 
-### Clone the repository locally
+### How to use pre-release version
 
 1. Clone the repository to your machine : `git clone https://github.com/AmitGujar/Bink-Chrome-Extension`
+2. Enable Extensions Developer Mode on Google Chrome/Microsoft Edge.
+3. Navigate to [chrome://extensions/](chrome://extensions/) or [edge://extensions](edge://extensions/).
+4. Enable developer mode (Toggle button in right top corner).
+5. Select `Load Unpacked` and browse and select the cloned repository folder.
+6. Make sure that the extension is enabled.
+7. Open a new tab in Chrome and you should see a splash screen with motivational quotes.
 
-### Enable Extensions Developer Mode on Google Chrome
+### NOTE
 
-1. Navigate to [chrome://extensions/](chrome://extensions/).
-2. Enable developer mode (Toggle button in right top corner).
-3. Select `Load Unpacked` and browse and select the cloned repository folder.
-4. Make sure that the extension is enabled.
-5. Open a new tab in Chrome and you should see a splash screen with motivational quotes.
+There is no difference between Chrome web store version and Microsoft version, MS version will get update a bit earlier then Chrome version.
 
 ## License
 
