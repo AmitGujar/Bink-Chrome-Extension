@@ -21,7 +21,7 @@
 
 1. Resolution issues for <1080p screens.
 
-[![https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj](/icons/Microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj) <br>
+<!-- [![https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj](/icons/Microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj) <br> -->
 
 [![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/Google.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
 
