@@ -14,8 +14,8 @@
 ## Contributers
 
 [Kalovelo](https://github.com/Kalovelo)<br>
-[unbeat](https://github.com/vandana1499)<br>
-[Abdul Rehman](https://github.com/Abdul-Sen)
+[Nicosh](https://github.com/nicosh)<br>
+[Unbeat](https://github.com/vandana1499)<br>
 
 ## Download
 
