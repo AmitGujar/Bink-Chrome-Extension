@@ -77,39 +77,45 @@ body {
 }
 
 /* code for sidebar */
-#mySidenav a {
+#mySidenav {
+  display: flex;
   position: absolute;
-  left: -100px;
-  transition: 0.3s;
-  padding: 15px;
-  width: 100px;
+  top: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: calc(100px + 1rem);
+}
+
+#mySidenav a {
+  width: 0px;
+  transition: 0.25s;
+  padding: 1rem 0.5rem;
+  color: transparent;
+  margin-top: 1rem;
   text-decoration: none;
   font-size: 19px;
-  color: white;
   border-radius: 0 5px 5px 0;
 }
 
 #mySidenav a:hover {
-  left: 0;
+  width: 100px;
+  color: white;
+  padding: 1rem;
 }
 
 #spotify {
-  top: 90px;
   background-color: #4CAF50;
 }
 
 #facebook {
-  top: 150px;
   background-color: #2196F3;
 }
 
 #youtube {
-  top: 210px;
   background-color: #f44336;
 }
 
 #twitter {
-  top: 270px;
   background-color: #555
 }
 
