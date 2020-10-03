@@ -4,17 +4,6 @@ When contributing to this repository, please first discuss the change you wish t
 email, or any other method with the owners of this repository before making a change. 
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
-
-## Pull Request Process
-
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
   
 ## Development Setup
 1. Clone the repository to your machine : `git clone https://github.com/AmitGujar/Bink-Chrome-Extension`
@@ -25,12 +14,6 @@ Please note we have a code of conduct, please follow it in all your interactions
 6. Make sure that the extension is enabled.
 7. Open a new tab in Chrome and you should see a splash screen with motivational quotes.
 8. Microsoft Edge disables all-new tab extensions by default so, make sure to enable it manually from the extensions section.
-
-## Issue tags
-* "Bug": Something that should work is broken
-* "Enhancement": AKA feature request - adds new functionality
-* "Hacktoberfest": Part of hacktoberfest program
-* "Task": Something that needs to be done that doesn't really fix anything or add major functionality. Tests, engineering, documentation, etc.
 
 ## Pull Request Process
 
@@ -51,8 +34,11 @@ Please note we have a code of conduct, please follow it in all your interactions
 4. You may merge the pull request in once you have the sign-off of the maintainers, or if you
    do not have permission to do that, you may request the second reviewer to merge it for you.
 
----
-
+## Issue tags
+* "Bug": Something that should work is broken
+* "Enhancement": AKA feature request - adds new functionality
+* "Hacktoberfest": Part of hacktoberfest program
+* "Task": Something that needs to be done that doesn't really fix anything or add major functionality. Tests, engineering, documentation, etc.
 
 ## Code of Conduct
 
