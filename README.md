@@ -7,7 +7,7 @@
 
 # Screenshots
 
-<img src="screenshot/Screenshot (12).png"
+<img src="screenshot/Screenshot (12).jpg"
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
