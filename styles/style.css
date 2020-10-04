@@ -114,12 +114,12 @@ body {
 }
 
 .time {
-  width: 32%;
-  font-size: 120px;
+  width: 20%;
+  font-size: 100px;
   line-height: 1;
   padding: 40px;
   /* padding-left: 10%; */
-  margin-left: 60px;
+  margin-left: 130px;
   color: #ddd3d3;
 }
 
