@@ -15,10 +15,10 @@ body {
   background-position: center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
-
 }
 
 /* code for top navbar */
+
 .topnav {
   overflow: hidden;
   background-color: transparent;
@@ -40,6 +40,7 @@ body {
 }
 
 /* code for search bar */
+
 .search {
   width: 50%;
   left: 45%;
@@ -77,6 +78,7 @@ body {
 }
 
 /* code for sidebar */
+
 #mySidenav a {
   position: absolute;
   left: -100px;
@@ -148,7 +150,6 @@ body {
   outline: none;
   background: none;
   color: white;
-
 }
 
 #chngicon {
@@ -189,4 +190,86 @@ body {
 .temperature-description {
   line-height: 0.5;
   padding-left: 14;
+}
+
+.todo {
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+  bottom: 20px;
+}
+
+.todo>#todoButton {
+  cursor: pointer;
+  color: #fff;
+}
+
+.todo-list {
+  position: absolute;
+  right: 5px;
+  bottom: 60px;
+  max-width: 250px;
+  max-height: 375px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #fff;
+  opacity: 0.75;
+  border-radius: 5px;
+}
+
+.todo-list::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 85%;
+  margin-left: -5px;
+  border-width: 7.5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.todo-list>.todo-list-header {
+  position: relative;
+  font-size: 18px;
+  padding: 16px;
+  display: flex;
+}
+
+.todo-list>.todo-list-header>.todo-list-header-date {
+  width: 100%;
+}
+
+.todo-list>.todo-list-content-list {
+  position: relative;
+  font-size: 16px;
+  padding-left: 16px;
+  margin: 0;
+  list-style: none;
+}
+
+.todo-list>.todo-list-content-list>.todo-list-content-list-item {
+  position: relative;
+}
+
+.todo-list>.todo-list-content-list>.todo-list-content-list-item>.todo-list-content-list-item-checkbox {
+  margin-left: 0;
+}
+
+.todo-list>.todo-list-content-list>.todo-list-content-list-item>.todo-list-content-list-item-text {
+  position: relative;
+}
+
+.todo-list>.todo-list-input {
+  position: absolute;
+  bottom: 10px;
+  height: 30px;
+  width: 100%;
+  outline: none;
+  background: black;
+  color: white;
+  border: none;
+  padding: 0 16px;
+  font-weight: 600;
+  font-size: 16px;
 }
