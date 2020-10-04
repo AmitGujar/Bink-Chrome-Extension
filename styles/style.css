@@ -2,7 +2,6 @@ body {
   width: auto;
   height: auto;
   margin: auto;
-  background-color: black !important;
 }
 
 .background-container {
@@ -49,11 +48,11 @@ body {
 }
 
 .searchTerm {
-  width: 85%;
+  width: 70%;
   border: 3px solid #00B4CC;
-  margin-left: 50px;
+  margin-left: 90px;
   padding: 3px;
-  height: 45px;
+  height: 40px;
   font-size: 20px;
   border-radius: 5px 5 5 5px;
   outline: none;
@@ -66,7 +65,7 @@ body {
 
 .searchButton {
   width: 58px;
-  height: 45px;
+  height: 40px;
   border: 3px solid #00B4CC;
   background: #00B4CC;
   text-align: center;
@@ -140,7 +139,7 @@ body {
 }
 
 .quote {
-  font-size: 25px;
+  font-size: 23px;
 }
 
 #change-btn {
