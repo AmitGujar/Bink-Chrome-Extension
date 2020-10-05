@@ -220,6 +220,7 @@ body {
   opacity: 0.75;
   border-radius: 5px;
   padding-bottom: 10px;
+  z-index: 100;
 }
 
 .todo-list::after {
@@ -245,7 +246,7 @@ body {
   width: 100%;
 }
 
-.todo-list>.todo-list-header>.todo-list-header-overflow{
+.todo-list>.todo-list-header>.todo-list-header-overflow {
   cursor: pointer;
 }
 
@@ -307,11 +308,13 @@ body {
   width: 16px;
   cursor: pointer;
 }
+
 ::-webkit-scrollbar-track {
   background-clip: padding-box;
   border: 3px solid transparent;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   background-color: grey;
@@ -319,9 +322,38 @@ body {
   border-radius: 8px;
   min-height: 12px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: #ddd;
 }
+
 ::-webkit-scrollbar-button {
   display: none;
+}
+
+.todo-list-dropdown {
+  position: absolute;
+  z-index: 101;
+  right: 1px;
+  top: 42px;
+  background: black;
+  width: 70px;
+  height: auto;
+  border: 1px solid #80808059;
+  border-radius: 2px;
+  box-sizing: content-box;
+  font-size: 14px;
+}
+
+.todo-list-dropdown-hide {
+  display: none;
+}
+
+.todo-list-dropdown>.todo-list-dropdown-item {
+  padding: 8px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: pointer;
+  background: black;
 }

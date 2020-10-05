@@ -19,9 +19,19 @@ if (!window.indexedDB) {
 }
 
 let showPopup = false;
+let showDropdown = false;
 
 document.getElementById("todoButton").addEventListener("click", () => {
     onToDoClick();
+});
+
+document.getElementById("todoMenu").addEventListener("click", () => {
+    onToDoMenuClick();
+});
+
+document.getElementById("todoDelete").addEventListener("click", () => {
+    document.getElementById("todoList").innerHTML = "";
+    onToDoMenuClick();
 });
 
 document.getElementById("todoInput").addEventListener("keydown", (event) => {
@@ -41,6 +51,19 @@ function onToDoClick() {
         document.getElementById("todoListContainer").classList.add("todo-list-hide");
     } else {
         document.getElementById("todoListContainer").classList.remove("todo-list-hide");
+    }
+
+    if (showDropdown) {
+        onToDoMenuClick();
+    }
+}
+
+function onToDoMenuClick() {
+    showDropdown = !showDropdown;
+    if (!showDropdown) {
+        document.getElementById("todoDropdown").classList.add("todo-list-dropdown-hide");
+    } else {
+        document.getElementById("todoDropdown").classList.remove("todo-list-dropdown-hide");
     }
 }
 
