@@ -56,21 +56,22 @@
             <div class="todo">
                 <span id="todoButton">Todo</span>
             </div>
-            <div class="todo-list">
+            <div id="todoListContainer" class="todo-list todo-list-hide">
                 <div class="todo-list-header">
                     <span class="todo-list-header-date">Today</span>
-                    <span class="todo-list-header-overflow">...</span>
+                    <i class="todo-list-header-overflow fa fa-ellipsis-h"></i>
                 </div>
-                <ul class="todo-list-content-list">
+                <ul id="todoList" class="todo-list-content-list">
                     <li class="todo-list-content-list-item">
                         <input class="todo-list-content-list-item-checkbox" type="checkbox" />
                         <span class="todo-list-content-list-item-text"> Hello </span>
                     </li>
                 </ul>
-                <input class="todo-list-input" type="text" placeholder="New Todo" />
+                <input id="todoInput" class="todo-list-input" type="text" placeholder="New Todo" />
             </div>
         </div>
     </div>
+    <script src="scripts/todo.js"></script>
 </body>
 
 </html>
