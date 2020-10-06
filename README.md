@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/github/license/AmitGujar/Bink-Chrome-Extension)](LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AmitGujar/Bink-Chrome-Extension?style=plastic)
-<hr>
+<br>
 <img src="screenshot/Screenshot (12).jpg"
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
