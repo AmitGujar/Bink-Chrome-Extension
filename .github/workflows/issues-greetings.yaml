@@ -1,0 +1,12 @@
+name: "Issue Greeter"
+on: [issues]
+
+jobs:
+  pr-greeter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Greeter"
+        uses: JJ/issue-greeting-action@releases/v0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          Greeting: "Hey **#** welcome to this repo, We will fix this issue shortly."
