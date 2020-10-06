@@ -32,6 +32,4 @@ For Background Images [Unsplash API](https://github.com/unsplash/unsplash-js)<br
 For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)<br>
 For Weather [Darksky API](https://darksky.net/)
 
-### NOTE
-
-There is no difference between Chrome web store version and Microsoft version, MS version will get update a bit earlier then Chrome version.
+### For any questions, check [FAQ](https://github.com/AmitGujar/Bink-Chrome-Extension/wiki/Frequently-Asked-Questions)
