@@ -10,12 +10,6 @@
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
-## Contributers
-
-[Kalovelo](https://github.com/Kalovelo)<br>
-[Nicosh](https://github.com/nicosh)<br>
-[Unbeat](https://github.com/vandana1499)<br>
-
 ## Download
 
 <p>
