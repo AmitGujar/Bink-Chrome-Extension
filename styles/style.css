@@ -40,10 +40,10 @@ body {
 
 /* code for search bar */
 .search {
-  position: relative;
-  width: 100%;
+  position: fixed;
+  width: 50%;
   left: 48%;
-  top: 50px;
+  top: 110px;
 }
 
 .searchTerm {
@@ -191,10 +191,4 @@ body {
 .temperature-description {
   line-height: 0.5;
   padding-left: 14;
-}
-
-@media only screen and (max-width: 1400px) {
-  .searchTerm, .searchButton {
-    margin-right: 10% !important;
-  }
 }
