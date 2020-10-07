@@ -40,15 +40,17 @@ body {
 
 /* code for search bar */
 .search {
-  position: fixed;
   width: 50%;
-  left: 54%;
+  left: 48%;
   top: 110px;
+  position: relative;
+  display: flex;
 }
 
 .searchTerm {
   width: 70%;
   border: 3px solid #00B4CC;
+  margin-left: 90px;
   padding: 3px;
   height: 40px;
   font-size: 20px;
@@ -74,10 +76,6 @@ body {
 }
 
 /* code for sidebar */
-.sidenav, .sidenav *{
-  box-sizing: unset !important;
-}
-
 #mySidenav a {
   position: absolute;
   left: -100px;
@@ -120,7 +118,7 @@ body {
   line-height: 1;
   padding: 40px;
   /* padding-left: 10%; */
-  margin-left: -15%;
+  margin-left: 130px;
   color: #ddd3d3;
 }
 
