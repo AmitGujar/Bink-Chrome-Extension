@@ -4,4 +4,4 @@ firstPRWelcomeComment: >
 
 # Comment to be posted to congratulate user on their first merged PR
 firstPRMergeComment: >
-  Congratulations!, Your merge is labelled as hacktoberfest-accepted :rocket:
+  Congratulations!, Your PR is labelled as hacktoberfest-accepted :rocket:
