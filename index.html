@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="scripts/main.js"></script>
     <script src="scripts/skycons.js"></script>
 </head>
@@ -22,11 +23,19 @@
                 <a href="https://www.youtube.com/" id="youtube">Youtube</a>
                 <a href="https://www.twitter.com/" id="twitter">Twitter</a>
             </div>
-            <div class="search">
-                <input type="text" class="searchTerm" placeholder="Let's Bing" id="input-query">
-                <button type="submit" class="searchButton" id="search-btn">bing</button>
-            </div>
-            <div class="time" id="current-time"></div>
+            <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-8">
+                    <div class="time" id="current-time"></div>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <div class="search form-inline">
+                        <input type="text" class="searchTerm" placeholder="Let's Bing" id="input-query">
+                        <button type="submit" class="searchButton" id="search-btn">bing</button>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
             <div class="info">
                 <center>
                     <div id="quotes" style="width: 87%; line-height: 1.6;">
@@ -50,7 +59,7 @@
                     <div class="degree-section">
                         <canvas class="icon" width="85" height="70"></canvas>
                         <div class="temperature-degree"></div>
-                        <div class="unit">°F</div>
+                        <div class="unit">°F</div><br>
                         <p class="temperature-description"></p>
                     </div>
                 </div>
