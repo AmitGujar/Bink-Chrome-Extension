@@ -1,7 +1,7 @@
 ## 7.1
 
 - Todo added [PR #13](https://github.com/AmitGujar/Bink-Chrome-Extension/pull/13)
-- Fixed Presistance issue in bug [PR #21](https://github.com/AmitGujar/Bink-Chrome-Extension/pull/21)
+- Fixed Presistance bug in Todo [PR #21](https://github.com/AmitGujar/Bink-Chrome-Extension/pull/21)
 
 ## 7.0
 
