@@ -17,7 +17,7 @@ body {
   width: 100%;
   background-position: center;
   -webkit-transition: background-image 0.5s;
-  transition: background-image 0.5s;
+  /* transition: background-image 0.5s; */
 }
 
 @keyframes fadeInAnimation {
