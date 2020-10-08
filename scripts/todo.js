@@ -31,6 +31,7 @@ document.getElementById("todoMenu").addEventListener("click", () => {
 
 document.getElementById("todoDelete").addEventListener("click", () => {
     document.getElementById("todoList").innerHTML = "";
+    deleteTask();
     onToDoMenuClick();
 });
 
@@ -38,7 +39,7 @@ document.getElementById("todoInput").addEventListener("keydown", (event) => {
     if (event.code === "Enter") {
         let task = document.getElementById("todoInput").value;
         if (task) {
-            // addTask(task);
+            addTask(task);
             document.getElementById("todoList").appendChild(createListItem(task));
             document.getElementById("todoInput").value = "";
         }
@@ -67,9 +68,27 @@ function onToDoMenuClick() {
     }
 }
 
-// function addTask(task) {
-//     window.localStorage.setItem("mydata", task);
-// }
+function getTask() {
+    let todolist = JSON.parse(window.localStorage.getItem("todolist"));
+    if (typeof todolist == "undefined" || todolist == null) {
+        todolist = ["Create awesome new task"];
+        window.localStorage.setItem("todolist", JSON.stringify(todolist));
+    }
+    todolist.forEach(task  => {
+        document.getElementById("todoList").appendChild(createListItem(task));
+    });
+}
+
+function addTask(task) {
+    let todolist = [];
+    todolist = JSON.parse(window.localStorage.getItem("todolist"));
+    todolist.push(task);
+    window.localStorage.setItem("todolist", JSON.stringify(todolist));
+}
+
+function deleteTask() {
+    window.localStorage.setItem("todolist", JSON.stringify([]));
+}
 
 function createListItem(task) {
     const listItemNode = document.createElement("li");
@@ -87,4 +106,6 @@ function createListItem(task) {
     listItemNode.appendChild(spanNode);
 
     return listItemNode;
-}
+}}
+
+getTask();
