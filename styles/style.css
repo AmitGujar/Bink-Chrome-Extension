@@ -3,9 +3,6 @@ body {
   height: auto;
   margin: auto;
   background-color: black !important;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 .background-container {
@@ -18,6 +15,9 @@ body {
   background-position: center;
   -webkit-transition: background-image 0.5s;
   /* transition: background-image 0.5s; */
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
 }
 
