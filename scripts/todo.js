@@ -1,5 +1,6 @@
 let showPopup = false;
 let showDropdown = false;
+let i = 0;
 
 document.getElementById("todoButton").addEventListener("click", () => {
     onToDoClick();
@@ -20,7 +21,7 @@ document.getElementById("todoInput").addEventListener("keydown", (event) => {
         let task = document.getElementById("todoInput").value;
         if (task) {
             addTask(task);
-            document.getElementById("todoList").appendChild(createListItem(task));
+            document.getElementById("todoList").appendChild(createListItem(false, task));
             document.getElementById("todoInput").value = "";
         }
     }
@@ -49,20 +50,29 @@ function onToDoMenuClick() {
 }
 
 function getTask() {
+    i = 0;
     let todolist = JSON.parse(window.localStorage.getItem("todolist"));
     if (typeof todolist == "undefined" || todolist == null) {
-        todolist = ["Create awesome new task"];
+        todolist = [{checked: false, text: "Create awesome new task"}];
         window.localStorage.setItem("todolist", JSON.stringify(todolist));
     }
     todolist.forEach(task  => {
-        document.getElementById("todoList").appendChild(createListItem(task));
+        document.getElementById("todoList").appendChild(createListItem(task.checked, task.text));
     });
 }
 
 function addTask(task) {
     let todolist = [];
     todolist = JSON.parse(window.localStorage.getItem("todolist"));
-    todolist.push(task);
+    todolist.push({checked: false, text: task});
+    window.localStorage.setItem("todolist", JSON.stringify(todolist));
+}
+
+function checkTask(index, checked) {
+    let todolist = [];
+    todolist = JSON.parse(window.localStorage.getItem("todolist"));
+    debugger
+    todolist[index].checked = checked;
     window.localStorage.setItem("todolist", JSON.stringify(todolist));
 }
 
@@ -70,13 +80,21 @@ function deleteTask() {
     window.localStorage.setItem("todolist", JSON.stringify([]));
 }
 
-function createListItem(task) {
+function createListItem(checked, task) {
     const listItemNode = document.createElement("li");
     listItemNode.classList.add("todo-list-content-list-item");
 
     const checkBoxNode = document.createElement("input");
     checkBoxNode.classList.add("todo-list-content-list-item-checkbox");
     checkBoxNode.type = "checkbox";
+    checkBoxNode.checked = checked;
+    checkBoxNode.addEventListener("change", (event) => {
+        let index = event.target.index;
+        let checked = event.target.value;
+        checkTask(index, checked);
+    });
+    checkBoxNode.index = i;
+    i++;
 
     const spanNode = document.createElement("span");
     spanNode.classList.add("todo-list-content-list-item-text");
