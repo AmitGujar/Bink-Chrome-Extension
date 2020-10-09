@@ -2,6 +2,10 @@ body {
   width: auto;
   height: auto;
   margin: auto;
+  background-color: black !important;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .background-container {
@@ -13,6 +17,18 @@ body {
   width: 100%;
   background-position: center;
   transition: background-image 0.5s;
+  -webkit-transition: background-image 0.5s;
+  /* transition: background-image 0.5s; */
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #main-container {
@@ -177,11 +193,7 @@ body {
 
 #change-btn:active i {
   -webkit-animation: fa-spin 0.5s linear;
-<<<<<<< HEAD
-          animation: fa-spin 0.5s linear;
-=======
   animation: fa-spin 0.5s linear;
->>>>>>> 2b6819f11c459550a7926e2cbf37aae12871d70b
   color: red;
 }
 
@@ -226,15 +238,9 @@ body {
 .todo > #todoButton {
   cursor: pointer;
   -webkit-user-select: none;
-<<<<<<< HEAD
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-=======
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
->>>>>>> 2b6819f11c459550a7926e2cbf37aae12871d70b
   color: #fff;
 }
 
