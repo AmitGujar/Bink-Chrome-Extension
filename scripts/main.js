@@ -7,6 +7,8 @@ window.onload = function () {
 
 window.addEventListener("load", function () {
   // console.log("All assets are loaded");
+  document.getElementById("search-bar").style.opacity = 1;
+  document.getElementById("main-container").style.opacity = 1;
   var searchButton = document.getElementById("search-btn");
   searchButton.addEventListener("click", function () {
     var searchQuery = document.getElementById("input-query").value;
@@ -39,6 +41,8 @@ function init() {
 function getTopSites() {
   const top_sites = (urls) => {
     const main = document.getElementById("main-nav");
+    document.getElementById("mySidenav").style.opacity = 1;
+    main.style.opacity = 1;
     let index = urls.length >= 6 ? 6 : urls.length;
     for (var i = 0; i <= index; i++) {
       if (
@@ -76,8 +80,8 @@ function shouldGetNewPhoto() {
 const clientID =
   "?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960e8630f47a14cf";
 
-function getQuotes() {
-  fetch("https://quote-garden.herokuapp.com/quotes/random")
+async function getQuotes() {
+  await fetch("https://quote-garden.herokuapp.com/quotes/random")
     .then((res) => res.json())
     .then((data) => {
       document.querySelector(".quote").innerHTML = `"${data.quoteText}"`;
@@ -85,7 +89,8 @@ function getQuotes() {
       document.querySelector(
         ".credit"
       ).innerHTML = `<i> by - ${data.quoteAuthor}</i>`;
-      document.querySelector("#quotes").style.opacity = 1;
+      document.getElementById("weather").style.opacity = 1;
+      document.getElementById("info-quotes").style.opacity = 1;
     });
 }
 
@@ -161,6 +166,7 @@ function getTime() {
   var timeString = _hours + ":" + _minutes;
   if (timeInDOM !== timeString) {
     document.getElementById("current-time").innerHTML = timeString;
+    document.getElementById("current-time").style.opacity = 1;
   }
 }
 // getTime() will be called in every 1 second of interval

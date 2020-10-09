@@ -12,8 +12,12 @@ body {
   height: 100%;
   width: 100%;
   background-position: center;
-  -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
+}
+
+#main-container {
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 /* code for top navbar */
@@ -78,6 +82,11 @@ body {
 
 /* code for sidebar */
 
+#mySidenav {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
 #mySidenav a {
   position: absolute;
   left: -100px;
@@ -122,11 +131,15 @@ body {
   /* padding-left: 10%; */
   margin-left: 130px;
   color: #ddd3d3;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 .info {
   color: #ddd3d3;
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 #quotes {
@@ -135,9 +148,6 @@ body {
   /* display: flex;
   flex-direction: column; */
   /* min-height: 30vh; */
-  opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
 }
 
 .quote {
@@ -162,8 +172,14 @@ body {
 }
 
 #change-btn:active i {
-  animation: fa-spin 0.5s linear;
+  -webkit-animation: fa-spin 0.5s linear;
+          animation: fa-spin 0.5s linear;
   color: red;
+}
+
+#weather {
+  opacity: 0;
+  transition: opacity 0.7s;
 }
 
 .weather {
@@ -201,7 +217,10 @@ body {
 
 .todo>#todoButton {
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #fff;
 }
 
