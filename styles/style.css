@@ -60,6 +60,7 @@ body {
   top: 110px;
   position: relative;
   display: flex;
+  animation-iteration-count: 1s;
 }
 
 .searchTerm {
