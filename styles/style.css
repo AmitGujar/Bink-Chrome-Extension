@@ -21,6 +21,10 @@ body {
 }
 
 /* code for top navbar */
+#main-nav {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
 
 .topnav {
   overflow: hidden;
@@ -54,7 +58,7 @@ body {
 
 .searchTerm {
   width: 70%;
-  border: 3px solid #00B4CC;
+  border: 3px solid #00b4cc;
   margin-left: 90px;
   padding: 3px;
   height: 40px;
@@ -71,8 +75,8 @@ body {
 .searchButton {
   width: 58px;
   height: 40px;
-  border: 3px solid #00B4CC;
-  background: #00B4CC;
+  border: 3px solid #00b4cc;
+  background: #00b4cc;
   text-align: center;
   color: #fff;
   border-radius: 5 5px 5px 5;
@@ -105,12 +109,12 @@ body {
 
 #spotify {
   top: 90px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 #facebook {
   top: 150px;
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 #youtube {
@@ -120,7 +124,7 @@ body {
 
 #twitter {
   top: 270px;
-  background-color: #555
+  background-color: #555;
 }
 
 .time {
@@ -168,12 +172,16 @@ body {
 
 #change-btn:hover {
   transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 #change-btn:active i {
   -webkit-animation: fa-spin 0.5s linear;
+<<<<<<< HEAD
           animation: fa-spin 0.5s linear;
+=======
+  animation: fa-spin 0.5s linear;
+>>>>>>> 2b6819f11c459550a7926e2cbf37aae12871d70b
   color: red;
 }
 
@@ -215,12 +223,18 @@ body {
   bottom: 20px;
 }
 
-.todo>#todoButton {
+.todo > #todoButton {
   cursor: pointer;
   -webkit-user-select: none;
+<<<<<<< HEAD
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+=======
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+>>>>>>> 2b6819f11c459550a7926e2cbf37aae12871d70b
   color: #fff;
 }
 
@@ -243,7 +257,7 @@ body {
 }
 
 .todo-list::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 100%;
   left: 85%;
@@ -253,7 +267,7 @@ body {
   border-color: black transparent transparent transparent;
 }
 
-.todo-list>.todo-list-header {
+.todo-list > .todo-list-header {
   position: relative;
   font-size: 18px;
   padding: 16px;
@@ -261,15 +275,15 @@ body {
   max-height: 54px;
 }
 
-.todo-list>.todo-list-header>.todo-list-header-date {
+.todo-list > .todo-list-header > .todo-list-header-date {
   width: 100%;
 }
 
-.todo-list>.todo-list-header>.todo-list-header-overflow {
+.todo-list > .todo-list-header > .todo-list-header-overflow {
   cursor: pointer;
 }
 
-.todo-list>.todo-list-content-list {
+.todo-list > .todo-list-content-list {
   position: relative;
   font-size: 16px;
   padding-left: 16px;
@@ -279,7 +293,7 @@ body {
   overflow: overlay;
 }
 
-.todo-list>.todo-list-content-list>.todo-list-content-list-item {
+.todo-list > .todo-list-content-list > .todo-list-content-list-item {
   position: relative;
   display: flex;
   min-height: 32px;
@@ -288,22 +302,31 @@ body {
   align-content: center;
 }
 
-.todo-list>.todo-list-content-list>.todo-list-content-list-item>.todo-list-content-list-item-checkbox {
+.todo-list
+  > .todo-list-content-list
+  > .todo-list-content-list-item
+  > .todo-list-content-list-item-checkbox {
   margin-left: 0;
 }
 
-.todo-list>.todo-list-content-list>.todo-list-content-list-item>.todo-list-content-list-item-text {
+.todo-list
+  > .todo-list-content-list
+  > .todo-list-content-list-item
+  > .todo-list-content-list-item-text {
   position: relative;
   word-break: break-word;
   margin-left: 8px;
 }
 
-.todo-list>.todo-list-content-list>.todo-list-content-list-item>.todo-list-content-list-item-checkbox:checked + .todo-list-content-list-item-text {
+.todo-list
+  > .todo-list-content-list
+  > .todo-list-content-list-item
+  > .todo-list-content-list-item-checkbox:checked
+  + .todo-list-content-list-item-text {
   text-decoration: line-through;
 }
 
-
-.todo-list>.todo-list-input {
+.todo-list > .todo-list-input {
   position: relative;
   min-height: 30px;
   height: 30px;
@@ -373,7 +396,7 @@ body {
   display: none;
 }
 
-.todo-list-dropdown>.todo-list-dropdown-item {
+.todo-list-dropdown > .todo-list-dropdown-item {
   padding: 8px 6px;
   width: 100%;
   box-sizing: border-box;

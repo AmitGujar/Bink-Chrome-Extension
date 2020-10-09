@@ -1,11 +1,11 @@
 window.onload = function () {
   init();
   document
-    .querySelector("#change-btn")
-    .addEventListener("click", unsplashGetPhotos);
+    .querySelector('#change-btn')
+    .addEventListener('click', unsplashGetPhotos);
 };
 
-window.addEventListener("load", function () {
+window.addEventListener('load', function () {
   // console.log("All assets are loaded");
   document.getElementById("search-bar").style.opacity = 1;
   document.getElementById("main-container").style.opacity = 1;
@@ -13,20 +13,20 @@ window.addEventListener("load", function () {
   searchButton.addEventListener("click", function () {
     var searchQuery = document.getElementById("input-query").value;
     var searchURL;
-    if (searchQuery === "") {
-      alert("Oooh..!! Enter Something");
+    if (searchQuery === '') {
+      alert('Oooh..!! Enter Something');
     } else {
-      searchURL = "https://www.bing.com/search?q=" + searchQuery;
+      searchURL = 'https://www.bing.com/search?q=' + searchQuery;
       window.open(searchURL);
       window.close();
     }
   });
 
-  var input = document.getElementById("input-query");
-  input.addEventListener("keyup", function (event) {
+  var input = document.getElementById('input-query');
+  input.addEventListener('keyup', function (event) {
     if (event.keyCode === 13) {
       event.preventDefault();
-      document.getElementById("search-btn").click();
+      document.getElementById('search-btn').click();
     }
   });
 });
@@ -47,13 +47,13 @@ function getTopSites() {
     for (var i = 0; i <= index; i++) {
       if (
         urls[i] &&
-        urls[i].hasOwnProperty("title") &&
-        urls[i].hasOwnProperty("url")
+        urls[i].hasOwnProperty('title') &&
+        urls[i].hasOwnProperty('url')
       ) {
-        let cssclass = i == 0 ? "active" : "";
+        let cssclass = i == 0 ? 'active' : '';
         let name =
           urls[i].title.length > 10
-            ? urls[i].title.substring(0, 10) + "..."
+            ? urls[i].title.substring(0, 10) + '...'
             : urls[i].title; // split the name if title is too long
         let html = `<a class="${cssclass}" href="${urls[i].url}">${name}</a>`;
         main.innerHTML += html;
@@ -70,7 +70,7 @@ function handleBackgroundInit() {
 const HOUR_LIMIT = 12;
 
 function shouldGetNewPhoto() {
-  const timestampFetched = parseInt(localStorage.getItem("timestampFetched"));
+  const timestampFetched = parseInt(localStorage.getItem('timestampFetched'));
   const timestampDiff = Date.now() - timestampFetched;
   const hourDiff = new Date(timestampDiff).getUTCHours();
   return HOUR_LIMIT < new Date(hourDiff).getHours();
@@ -78,13 +78,13 @@ function shouldGetNewPhoto() {
 
 //api access key
 const clientID =
-  "?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960e8630f47a14cf";
+  '?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960e8630f47a14cf';
 
 async function getQuotes() {
   await fetch("https://quote-garden.herokuapp.com/quotes/random")
     .then((res) => res.json())
     .then((data) => {
-      document.querySelector(".quote").innerHTML = `"${data.quoteText}"`;
+      document.querySelector('.quote').innerHTML = `"${data.quoteText}"`;
       // ! planned to remove quote author, cuz i know no one cares about that lol.
       document.querySelector(
         ".credit"
@@ -98,17 +98,17 @@ function fetchImage() {
   const img = new Image();
   img.onload = function () {
     document.getElementById(
-      "background-container"
+      'background-container'
     ).style.backgroundImage = `url(${this.src})`;
   };
 
-  if (localStorage.getItem("image") === null) {
-    img.src = "styles/default.jpg";
+  if (localStorage.getItem('image') === null) {
+    img.src = 'styles/default.jpg';
   } else {
-    img.src = localStorage.getItem("image");
-    credit.innerHTML = `<a target="_blank">${localStorage.getItem("name")}</a>`;
+    img.src = localStorage.getItem('image');
+    credit.innerHTML = `<a target="_blank">${localStorage.getItem('name')}</a>`;
     navigate.innerHTML = `<a target="_blank"  style="color : white; font-size:130%;" href="${localStorage.getItem(
-      "link"
+      'link'
     )}">Download Photo</a>`;
   }
 }
@@ -118,7 +118,7 @@ async function handleImageUrl(url) {
   const blob = await fetch(url).then((res) => res.blob());
   await reader.readAsDataURL(blob);
   reader.onload = function (e) {
-    localStorage.setItem("image", reader.result);
+    localStorage.setItem('image', reader.result);
     fetchImage();
   };
 }
@@ -131,9 +131,9 @@ function unsplashGetPhotos() {
   )
     .then((res) => res.json())
     .then((data) => {
-      localStorage.setItem("timestampFetched", Date.now());
-      localStorage.setItem("name", data.user.name);
-      localStorage.setItem("link", data.links.html);
+      localStorage.setItem('timestampFetched', Date.now());
+      localStorage.setItem('name', data.user.name);
+      localStorage.setItem('link', data.links.html);
       handleImageUrl(data.urls.custom);
     })
     .catch((err) => {
@@ -143,7 +143,7 @@ function unsplashGetPhotos() {
 
 // ! test code for auto change wallpaper starts from here
 
-chrome.alarms.create("ChangeWallpaper", {
+chrome.alarms.create('ChangeWallpaper', {
   // delayInMinutes: 1.0,
   periodInMinutes: 12 * 60,
 });
@@ -156,14 +156,14 @@ function getTime() {
   var systemDate = new Date();
   var hours = systemDate.getHours();
   var minutes = systemDate.getMinutes();
-  var ampm = hours >= 24 ? "pm" : "am";
+  var ampm = hours >= 24 ? 'pm' : 'am';
   var twelve = hours % 24;
   hours = twelve == 0 ? 24 : twelve;
   _hours = checkTimeAddZero(hours);
   _minutes = checkTimeAddZero(minutes);
   //Only update if time is changed, this will prevent unnecessary re-render
-  var timeInDOM = document.getElementById("current-time").innerHTML;
-  var timeString = _hours + ":" + _minutes;
+  var timeInDOM = document.getElementById('current-time').innerHTML;
+  var timeString = _hours + ':' + _minutes;
   if (timeInDOM !== timeString) {
     document.getElementById("current-time").innerHTML = timeString;
     document.getElementById("current-time").style.opacity = 1;
@@ -175,26 +175,26 @@ setInterval(getTime, 1000);
 //Function add zero
 function checkTimeAddZero(i) {
   if (i < 10) {
-    i = "0" + i;
+    i = '0' + i;
   }
   return i;
 }
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   let long;
   let lat;
   let temperatureDescription = document.querySelector(
-    ".temperature-description"
+    '.temperature-description'
   );
-  let temperatureDegree = document.querySelector(".temperature-degree");
-  let temperatureSection = document.querySelector(".temperature");
-  const temperatureSpan = document.querySelector(".unit");
+  let temperatureDegree = document.querySelector('.temperature-degree');
+  let temperatureSection = document.querySelector('.temperature');
+  const temperatureSpan = document.querySelector('.unit');
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      const proxy = "http://cors-anywhere.herokuapp.com/";
+      const proxy = 'http://cors-anywhere.herokuapp.com/';
       const api = `${proxy}https://api.darksky.net/forecast/551f03febb4552249ba0f312ebdbd498/${lat},${long}`;
       fetch(api)
         .then((response) => {
@@ -205,13 +205,13 @@ window.addEventListener("load", () => {
           temperatureDegree.textContent = Math.floor(temperature);
           temperatureDescription.textContent = summary;
           let celcius = (temperature - 32) * (5 / 9);
-          setIcons(icon, document.querySelector(".icon"));
-          temperatureSection.addEventListener("click", () => {
-            if (temperatureSpan.textContent === "°F") {
-              temperatureSpan.textContent = "°C";
+          setIcons(icon, document.querySelector('.icon'));
+          temperatureSection.addEventListener('click', () => {
+            if (temperatureSpan.textContent === '°F') {
+              temperatureSpan.textContent = '°C';
               temperatureDegree.textContent = Math.floor(celcius);
             } else {
-              temperatureSpan.textContent = "°F";
+              temperatureSpan.textContent = '°F';
               temperatureDegree.textContent = Math.floor(temperature);
             }
           });
@@ -221,9 +221,9 @@ window.addEventListener("load", () => {
 
   function setIcons(icon, iconID) {
     const skycons = new Skycons({
-      color: "white",
+      color: 'white',
     });
-    const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+    const currentIcon = icon.replace(/-/g, '_').toUpperCase();
     skycons.play();
     return skycons.set(iconID, Skycons[currentIcon]);
   }
