@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Bink - Personal Dashboard For Chrome",
   "description": "Bink makes your browser Homescreen Beautiful with Daily new Wallpapers and Motivational Quotes.",
-  "version": "7.2",
+  "version": "8.0",
   "author": "Amit Gujar",
   "browser_action": {
     "default_popup": "popup.html",
