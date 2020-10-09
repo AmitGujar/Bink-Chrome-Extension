@@ -1,5 +1,6 @@
-## 7.1
+## 8.0
 
+- Added transitions for new tab
 - Todo added [PR #13](https://github.com/AmitGujar/Bink-Chrome-Extension/pull/13)
 - Fixed Presistance bug in Todo [PR #21](https://github.com/AmitGujar/Bink-Chrome-Extension/pull/21)
 
