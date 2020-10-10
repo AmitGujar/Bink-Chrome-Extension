@@ -13,7 +13,7 @@
 
 ## Download
 
-| [![Chrome Web Store](icons/Google.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba) | [![Windows Store](icons/Microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj) |
+[![Chrome Web Store](icons/Google.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba) [![Windows Store](icons/Microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj)
 
 <!-- <p>
 <a href="https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj">
