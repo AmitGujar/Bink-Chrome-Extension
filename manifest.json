@@ -16,5 +16,5 @@
     "32": "icons/icons32.png",
     "16": "icons/icons16.png"
   },
-  "permissions": ["topSites", "activeTab", "storage", "geolocation", "alarms"]
+  "permissions": ["topSites", "activeTab", "storage", "geolocation", "alarms", "background"]
 }
