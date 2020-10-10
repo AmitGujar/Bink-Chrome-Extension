@@ -6,20 +6,24 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/AmitGujar/Bink-Chrome-Extension?style=plastic)
 
 ## Screenshot
+
 <img src="screenshot/Screenshot (12).png"
      alt="Extension Screenshot"
      style="float: left; margin-right: 10px;" />
 
 ## Download
 
-<p>
+| ---------- | ----------- |
+| [![Chrome Web Store](icons/Google.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba) | [![Windows Store](icons/Microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj) |
+
+<!-- <p>
 <a href="https://microsoftedge.microsoft.com/addons/detail/bink-personal-dashboard/ecggbpmbngmiidmalbifljnibfkboibj">
 <img src = "/icons/Microsoft.png" width=250px height=90px>
 </a><br>
 
 [![https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba](/icons/Google.png)](https://chrome.google.com/webstore/detail/bink-personal-dashboard-f/hobnhcjgdhdcmgcjlidgcladgdlbpgba)
 
-</p>
+</p> -->
 
 ## Dependencies
 
