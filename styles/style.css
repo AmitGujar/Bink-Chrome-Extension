@@ -377,9 +377,3 @@ body {
   cursor: pointer;
   background: black;
 }
-
-#input-minutes {
-  text-align: right;
-  height: 20px;
-  line-height: 20px;
-}
