@@ -27,38 +27,13 @@ window.addEventListener("load", function () {
       document.getElementById("search-btn").click();
     }
   });
-
-  var inputMinutes = document.getElementById("input-minutes");
-  inputMinutes.addEventListener("keyup", function (event) {
-    this.value = getInputMinutes(this);
-  });
-
-  inputMinutes.addEventListener('change', (event) => {
-    cancelAlarm();
-    createAlarm();
-  });
 });
-
-function getInputMinutes(element) {
-    var min = parseInt(element.getAttribute('min')) || 1; 
-    var max = parseInt(element.getAttribute('max')) || 9999;
-    if (isNaN(element.value)) return null;
-    var val = parseInt(element.value);
-    if (!val) 
-      return null;
-    if (val < min)
-      val = min;
-    else if (val > max)
-      val = max;
-    return val;
-}
 
 function init() {
   handleBackgroundInit();
   getTime();
   getQuotes();
   getTopSites();
-  createAlarm();
 }
 
 function getTopSites() {
@@ -163,22 +138,10 @@ function unsplashGetPhotos() {
 
 // ! test code for auto change wallpaper starts from here
 
-function getAlarmName() {
-  return "ChangeWallpaper";
-}
-
-function createAlarm() {
-  var defaultPeriod = 12 * 60;
-  var periodInMins = getInputMinutes(document.getElementById("input-minutes")) || defaultPeriod;
-  chrome.alarms.create(getAlarmName(), {
-    // delayInMinutes: 1.0,
-    periodInMinutes: periodInMins,
-  });
-}
-
-function cancelAlarm() {
-  chrome.alarms.clear(getAlarmName());
-}
+chrome.alarms.create("ChangeWallpaper", {
+  // delayInMinutes: 1.0,
+  periodInMinutes: 12 * 60,
+});
 
 chrome.alarms.onAlarm.addListener(unsplashGetPhotos);
 
