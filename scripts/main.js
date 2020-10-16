@@ -128,7 +128,7 @@ function unsplashGetPhotos() {
     .then((data) => {
       localStorage.setItem("timestampFetched", Date.now());
       localStorage.setItem("name", data.user.name);
-      localStorage.setItem("link", data.links.html);
+      localStorage.setItem("link", `${data.links.download}?force=true`);
       handleImageUrl(data.urls.custom);
     })
     .catch((err) => {
