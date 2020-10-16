@@ -102,9 +102,9 @@ function fetchImage() {
   } else {
     img.src = localStorage.getItem("image");
     credit.innerHTML = `<a target="_blank">${localStorage.getItem("name")}</a>`;
-    navigate.innerHTML = `<a target="_blank"  style="color : white; font-size:130%;" href="${localStorage.getItem(
+    navigate.innerHTML = `<a style="color : white; font-size:130%;" href="${localStorage.getItem(
       "link"
-    )}">Download Photo</a>`;
+    )}">Download</a>`;
   }
 }
 
