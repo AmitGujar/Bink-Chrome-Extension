@@ -12,7 +12,7 @@ body {
   position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   height: 100%;
   width: 100%;
   background-position: center;
@@ -156,7 +156,8 @@ body {
 }
 
 .quote {
-  font-size: 23px;
+  /* font-size: 23px; */
+  font-size: 175%;
 }
 
 #change-btn {
@@ -210,7 +211,7 @@ body {
 .todo {
   position: absolute;
   right: 20px;
-  font-size: 16px;
+  font-size: 18px;
   bottom: 20px;
 }
 
