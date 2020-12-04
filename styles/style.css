@@ -42,7 +42,7 @@ body {
   float: left;
   color: #ddd3d3;
   text-align: center;
-  padding: 10px 12px;
+  padding: 10px 10px;
   text-decoration: none;
   font-size: 15px;
 }
@@ -131,7 +131,7 @@ body {
 
 .time {
   width: 20%;
-  font-size: 100px;
+  font-size: 90px;
   line-height: 1;
   padding: 40px;
   /* padding-left: 10%; */
@@ -156,7 +156,6 @@ body {
 }
 
 .quote {
-  /* font-size: 23px; */
   font-size: 175%;
 }
 
