@@ -77,14 +77,13 @@ const clientID =
   "?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960e8630f47a14cf";
 
 function getQuotes() {
-  fetch("https://quote-garden.herokuapp.com/quotes/random")
+  fetch("https://api.quotable.io/random")
     .then((res) => res.json())
     .then((data) => {
-      document.querySelector(".quote").innerHTML = `"${data.quoteText}"`;
-      // ! planned to remove quote author, cuz i know no one cares about that lol.
+      document.querySelector(".quote").innerHTML = `"${data.content}"`;
       document.querySelector(
         ".credit"
-      ).innerHTML = `<i> by - ${data.quoteAuthor}</i>`;
+      ).innerHTML = `<i> by - ${data.author}</i>`;
       document.querySelector("#quotes").style.opacity = 1;
     });
 }
