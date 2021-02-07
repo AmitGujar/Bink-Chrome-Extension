@@ -77,13 +77,11 @@ const clientID =
   "?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960e8630f47a14cf";
 
 function getQuotes() {
-  fetch("https://api.quotable.io/random")
+  fetch("https://freefacts.azurewebsites.net/facts/random")
     .then((res) => res.json())
     .then((data) => {
-      document.querySelector(".quote").innerHTML = `"${data.content}"`;
-      document.querySelector(
-        ".credit"
-      ).innerHTML = `<i> by - ${data.author}</i>`;
+      document.querySelector(".quote").innerHTML = `"${data[0].name}"`;
+      document.querySelector(".credit");
       document.querySelector("#quotes").style.opacity = 1;
     });
 }
