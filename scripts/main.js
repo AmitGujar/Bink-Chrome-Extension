@@ -77,7 +77,7 @@ const clientID =
   "?client_id=8249d860403116cd4d1f60d039c9decb42300d417588a4d5960e8630f47a14cf";
 
 function getQuotes() {
-  fetch("https://freefacts.azurewebsites.net/facts/random")
+  fetch("https://freefacts.herokuapp.com/facts/random")
     .then((res) => res.json())
     .then((data) => {
       document.querySelector(".quote").innerHTML = `"${data[0].name}"`;
