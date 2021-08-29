@@ -94,10 +94,10 @@ function fetchImage() {
     ).style.backgroundImage = `url(${this.src})`;
   };
 
-  if (localStorage.getItem("image") === null) {
+  if (localStorage.getItem("url") === null) {
     img.src = "styles/default.jpg";
   } else {
-    img.src = localStorage.getItem("image");
+    img.src = localStorage.getItem("url");
     credit.innerHTML = `<a target="_blank">${localStorage.getItem("name")}</a>`;
     navigate.innerHTML = `<a style="color : white; font-size:130%;" href="${localStorage.getItem(
       "link"
@@ -105,28 +105,18 @@ function fetchImage() {
   }
 }
 
-async function handleImageUrl(url) {
-  const reader = new FileReader();
-  const blob = await fetch(url).then((res) => res.blob());
-  await reader.readAsDataURL(blob);
-  reader.onload = function (e) {
-    localStorage.setItem("image", reader.result);
-    fetchImage();
-  };
-}
-
 function unsplashGetPhotos() {
   const width = window.innerWidth;
   const height = window.innerHeight;
-  fetch(
-    `https://api.unsplash.com/photos/random${clientID}&w=${width}&h=${height}`
-  )
+  fetch(`https://api.unsplash.com/photos/random${clientID}&w=${width}&h=${height}`)
     .then((res) => res.json())
     .then((data) => {
-      localStorage.setItem("timestampFetched", Date.now());
+      localStorage.setItem("url", data.urls.full);
       localStorage.setItem("name", data.user.name);
       localStorage.setItem("link", `${data.links.download}?force=true`);
-      handleImageUrl(data.urls.custom);
+    })
+    .then(() => {
+      fetchImage();
     })
     .catch((err) => {
       console.error(err);
