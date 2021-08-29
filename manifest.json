@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Bink - Personal Dashboard For Chrome",
   "description": "Bink makes your browser Homescreen Beautiful with Daily new Wallpapers and Motivational Quotes.",
   "version": "8.0",
