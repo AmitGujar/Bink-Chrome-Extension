@@ -55,6 +55,9 @@
                     </div>
                 </div>
             </div>
+            <div class="config">
+                <i aria-hidden="true" id="configIcon" title="change wallpaper" class="fa fa-cog"></i>
+            </div>
             <div class="todo">
                 <span id="todoButton">Todo</span>
             </div>
@@ -69,6 +72,17 @@
                 <div id="todoDropdown" class="todo-list-dropdown todo-list-dropdown-hide">
                     <div class="todo-list-dropdown-item" id="todoDelete">Delete</div>
                 </div>
+            </div>
+            <div id="configContainer" class="config-list config-hide">
+                <div class="todo-list-header">
+                    <span class="todo-list-header-date">Configurations</span>
+                </div>
+                <ul id="todoList" class="todo-list-content-list">
+                    <li class="">
+                        <input id="timeBetween" min="0.1" step="0.25" type="number" style="width: 65px;margin-right: 10px;">
+                        <span class="todo-list-content-list-item-text">Hours between wallpaper change.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

@@ -167,7 +167,7 @@ body {
   color: white;
 }
 
-#chngicon {
+#chngicon, #configIcon {
   font-size: 25;
 }
 
@@ -249,7 +249,7 @@ body {
   border-color: black transparent transparent transparent;
 }
 
-.todo-list>.todo-list-header {
+.todo-list>.todo-list-header, .config-list>.todo-list-header {
   position: relative;
   font-size: 18px;
   padding: 16px;
@@ -265,7 +265,7 @@ body {
   cursor: pointer;
 }
 
-.todo-list>.todo-list-content-list {
+.todo-list>.todo-list-content-list, .config-list>.todo-list-content-list {
   position: relative;
   font-size: 16px;
   padding-left: 16px;
@@ -376,4 +376,45 @@ body {
   font-size: 14px;
   cursor: pointer;
   background: black;
+}
+
+.config {
+  position: absolute;
+  top: 25px;
+  right: 29px;
+  color: white;
+}
+
+.config-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 5px;
+  top: 60px;
+  max-width: 250px;
+  max-height: 375px;
+  width: 100%;
+  height: auto;
+  background: black;
+  color: #fff;
+  opacity: 0.75;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  z-index: 100;
+}
+
+.config-list::after {
+  content: " ";
+  position: absolute;
+  top: -14%;
+  left: 85%;
+  margin-left: -5px;
+  border-width: 7.5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  transform: rotate(180deg);
+}
+
+.config-hide {
+  display: none;
 }

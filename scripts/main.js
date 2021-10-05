@@ -27,6 +27,37 @@ window.addEventListener("load", function () {
       document.getElementById("search-btn").click();
     }
   });
+
+  document.getElementById("configIcon").addEventListener("click", () => {
+    onConfigClick();
+  });
+
+  // Set the time interval to 12h if not configured
+  let timeLimit = localStorage.getItem("timeLimit");
+  if (!timeLimit) {
+    timeLimit = 12;
+    localStorage.setItem("timeLimit", timeLimit);
+  }
+
+  document.getElementById("timeBetween").value = timeLimit;
+
+  document.getElementById("timeBetween").addEventListener("change", () => {
+    localStorage.setItem("timeLimit", document.getElementById("timeBetween").value);
+  });
+});
+
+function onConfigClick() {
+  let configContainer = document.getElementById("configContainer");
+  if (!configContainer.classList.contains("config-hide")) {
+      document.getElementById("configContainer").classList.add("config-hide");
+  } else {
+      document.getElementById("configContainer").classList.remove("config-hide");
+  }
+}
+
+// Verify if need to change the wallpaper every time the window is focused
+window.addEventListener("focus", () => {
+  if (shouldGetNewPhoto()) unsplashGetPhotos();
 });
 
 function init() {
@@ -63,13 +94,12 @@ function handleBackgroundInit() {
   fetchImage();
   if (shouldGetNewPhoto()) unsplashGetPhotos();
 }
-const HOUR_LIMIT = 12;
 
 function shouldGetNewPhoto() {
-  const timestampFetched = parseInt(localStorage.getItem("timestampFetched"));
-  const timestampDiff = Date.now() - timestampFetched;
-  const hourDiff = new Date(timestampDiff).getUTCHours();
-  return HOUR_LIMIT < new Date(hourDiff).getHours();
+  // Calculate the millis passed then convert to hours
+  let hoursPassed = (Date.now() - new Date(parseInt(localStorage.getItem("timestampFetched"))))/1000/60/60;
+  let limit = parseFloat(localStorage.getItem("timeLimit"));
+  return limit < hoursPassed;
 }
 
 //api access key
@@ -114,6 +144,7 @@ function unsplashGetPhotos() {
       localStorage.setItem("url", data.urls.full);
       localStorage.setItem("name", data.user.name);
       localStorage.setItem("link", `${data.links.download}?force=true`);
+      localStorage.setItem("timestampFetched", Date.now());
     })
     .then(() => {
       fetchImage();
@@ -124,14 +155,15 @@ function unsplashGetPhotos() {
 }
 
 // ! test code for auto change wallpaper starts from here
-
+// Set time period based on time limit to at least 5 min
 chrome.alarms.create("ChangeWallpaper", {
-  // delayInMinutes: 1.0,
-  periodInMinutes: 12 * 60,
+  periodInMinutes: (parseFloat(localStorage.getItem("timeLimit")) * 60) < 5 ? 5 : (parseFloat(localStorage.getItem("timeLimit")) * 60),
 });
 
-chrome.alarms.onAlarm.addListener(unsplashGetPhotos);
-
+// Only change the wallpaper if needed
+chrome.alarms.onAlarm.addListener(() => {
+  if (shouldGetNewPhoto()) unsplashGetPhotos();
+});
 //! test code ends here
 
 function getTime() {
