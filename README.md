@@ -18,7 +18,7 @@
 ## Dependencies
 
 For Background Images [Unsplash API](https://github.com/unsplash/unsplash-js)<br>
-For Quotes [QuoteGarden](https://github.com/pprathameshmore/QuoteGarden)<br>
+For Facts [freeFacts](https://github.com/AmitGujar/freeFacts)<br>
 For Weather [Darksky API](https://darksky.net/)
 
 ### For any questions, check [FAQ](https://github.com/AmitGujar/Bink-Chrome-Extension/wiki/Frequently-Asked-Questions)
