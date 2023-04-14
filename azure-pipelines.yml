@@ -1,0 +1,28 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    # Install Chrome
+    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+    sudo apt-get update
+    sudo apt-get install -y google-chrome-stable
+
+    # Install other dependencies
+    sudo apt-get install -y zip
+
+    # Build the extension
+    cd path/to/extension
+    zip -r ../extension.zip *
+
+  displayName: 'Install Chrome, other dependencies, and build extension'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    artifactName: 'ChromeExtension'
+    pathToPublish: '$(Pipeline.Workspace)/extension.zip'
+  displayName: 'Publish extension artifact'
