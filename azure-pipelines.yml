@@ -1,28 +1,25 @@
 trigger:
-- main
+  - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
 steps:
-- script: |
-    # Install Chrome
-    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-    sudo apt-get update
-    sudo apt-get install -y google-chrome-stable
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        mkdir "$(Build.SourcesDirectory)/dist"
+        cp -r "$(Build.SourcesDirectory)/src/*" "$(Build.SourcesDirectory)/dist"
+        cd "$(Build.SourcesDirectory)/dist"
+        openssl genrsa -out key.pem 2048
+        openssl rsa -in key.pem -outform DER -pubout -out public.pem
+        zip -r extension.zip .
+        node "$(Build.SourcesDirectory)/dist/generate-crx.js"
+    displayName: 'Build and package extension'
 
-    # Install other dependencies
-    sudo apt-get install -y zip
-
-    # Build the extension
-    cd path/to/extension
-    zip -r ../extension.zip *
-
-  displayName: 'Install Chrome, other dependencies, and build extension'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    artifactName: 'ChromeExtension'
-    pathToPublish: '$(Pipeline.Workspace)/extension.zip'
-  displayName: 'Publish extension artifact'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      artifactName: 'extension'
+      pathtoPublish: '$(Build.SourcesDirectory)/dist/my-extension.crx'
+    displayName: 'Publish extension artifact'
